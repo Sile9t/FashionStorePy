@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/_utilities.css">
+    <link rel="stylesheet" href="./css/Brands.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src="./js/preload.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main id="main" class="justify-content-around">
+        <nav class="pointer " aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumb-item"><a href="">New-In</a></li>
+            </ol>
+        </nav>
+        <div class="brands-list-wrapper">
+            <h2><span>Maria</span>, оцените лучшие новинки этой недели</h2>
+            <div class="filter-sort-group d-flex justify-content-end">
+                <div class="filter-btns flex-fill">
+                    <button type="button" class="all-filters filter-btn">
+                        Все фильтры
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                            <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="search-description-wrapper d-flex flex-row">
+                <div class="search-wrapper d-flex flex-row align-items-center">
+                    <input type="search" id="search" name="" placeholder="Поиск по брендам">
+                    <div class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(80, 80, 80, 0.5)" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="header">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgb(224, 36,94)" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                              </svg>
+                            Любимые бренды
+                        </h3>
+                    </div>
+                    <div class="notice">
+                        <p> Здесь собраны ваши любимые дизайнеры и бренды. Нажмите на 
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                        </span> рядом с названием, чтобы добавить в избранное.</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="brands-list">
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand1">
+                        <label class="icon d-flex flex-row" for="brand1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand2">
+                        <label class="icon d-flex flex-row" for="brand2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand3">
+                        <label class="icon d-flex flex-row" for="brand3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand4">
+                        <label class="icon d-flex flex-row" for="brand4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand5">
+                        <label class="icon d-flex flex-row" for="brand5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand6">
+                        <label class="icon d-flex flex-row" for="brand6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand7">
+                        <label class="icon d-flex flex-row" for="brand7">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand8">
+                        <label class="icon d-flex flex-row" for="brand8">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand9">
+                        <label class="icon d-flex flex-row" for="brand9">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand10">
+                        <label class="icon d-flex flex-row" for="brand10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand11">
+                        <label class="icon d-flex flex-row" for="brand11">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand12">
+                        <label class="icon d-flex flex-row" for="brand12">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand13">
+                        <label class="icon d-flex flex-row" for="brand13">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand14">
+                        <label class="icon d-flex flex-row" for="brand14">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand15">
+                        <label class="icon d-flex flex-row" for="brand15">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand16">
+                        <label class="icon d-flex flex-row" for="brand16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand17">
+                        <label class="icon d-flex flex-row" for="brand17">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand18">
+                        <label class="icon d-flex flex-row" for="brand18">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand19">
+                        <label class="icon d-flex flex-row" for="brand19">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand20">
+                        <label class="icon d-flex flex-row" for="brand20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand21">
+                        <label class="icon d-flex flex-row" for="brand21">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand22">
+                        <label class="icon d-flex flex-row" for="brand22">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand23">
+                        <label class="icon d-flex flex-row" for="brand23">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand24">
+                        <label class="icon d-flex flex-row" for="brand24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand25">
+                        <label class="icon d-flex flex-row" for="brand25">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand26">
+                        <label class="icon d-flex flex-row" for="brand26">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand27">
+                        <label class="icon d-flex flex-row" for="brand27">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand28">
+                        <label class="icon d-flex flex-row" for="brand28">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand29">
+                        <label class="icon d-flex flex-row" for="brand29">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand30">
+                        <label class="icon d-flex flex-row" for="brand30">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand31">
+                        <label class="icon d-flex flex-row" for="brand31">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand32">
+                        <label class="icon d-flex flex-row" for="brand32">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand33">
+                        <label class="icon d-flex flex-row" for="brand33">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand34">
+                        <label class="icon d-flex flex-row" for="brand34">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand35">
+                        <label class="icon d-flex flex-row" for="brand35">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand36">
+                        <label class="icon d-flex flex-row" for="brand36">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand37">
+                        <label class="icon d-flex flex-row" for="brand37">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand38">
+                        <label class="icon d-flex flex-row" for="brand38">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand39">
+                        <label class="icon d-flex flex-row" for="brand39">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand40">
+                        <label class="icon d-flex flex-row" for="brand40">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand41">
+                        <label class="icon d-flex flex-row" for="brand41">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand42">
+                        <label class="icon d-flex flex-row" for="brand42">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand43">
+                        <label class="icon d-flex flex-row" for="brand43">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand44">
+                        <label class="icon d-flex flex-row" for="brand44">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="brand-item d-inline-flex">
+                    <div class="fav-icon">
+                        <input class="brand-checkbox" type="checkbox" title="brand name" id="brand45">
+                        <label class="icon d-flex flex-row" for="brand45">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <div class="brand-name">
+                                Название бренда
+                            </div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="questions-section"></div>
+        <div id="subscribe-section"></div>
+    </main>
+    <div id="footer"></div>
+    <script src="./js/Index.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+.cart-sum-wrapper {
+
+    .cart-list-wrapper {
+        margin-right: 4vw;
+
+        .list-header {
+            /* margin-right: 2rem; */
+            h2, h3 {
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: 1vw;
+            }
+
+            .duties-notice {
+                padding-right: 1vw;
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    
+        .list-wrapper {
+            .cart-item {
+                padding: 1vw;
+                
+                img {
+                    width: 15vw;
+                    border: 1px solid rgba(0, 0, 0, .125);
+                    border-radius: .5rem;
+                    margin-bottom: 1rem;
+                    padding: 2rem 1rem;
+                    aspect-ratio: 2 / 3;
+                    box-shadow: .15rem .15rem 1rem var(--card-img-shadow);
+                    justify-content: center;
+                }
+
+                .purchase-info {
+                    border-top: 2px solid var(--card-img-shadow);
+                    padding: 2vw 0 0 3vw;
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .short-info {
+
+                        .brand {
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+    
+                    }
+    
+                    .cost-info {
+                        .cost {
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+                    }
+    
+                    .size-quanity-wrapper {
+                        :nth-child(n+1 of div) {
+                            margin-bottom: 1rem;
+
+                            .value {
+                                font-weight: 600;
+                                margin-left: .5rem;
+
+                                a {
+                                    margin-left: .5rem;
+                                    color: grey;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+    
+                        .added-to-favourite {
+                            margin-top: 2rem;
+
+                            .favourite {
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    
+        .purch-sum-wrapper {
+    
+        }
+    }
+    
+    .purch-sum-wrapper {
+        a {
+            color: black;
+        }
+        
+        .purch-sum {
+            margin-top: 2rem;
+
+            .summary {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.question-topics-wrapper {
+    margin: 3rem 0;
+        
+    .topic {
+        width: 30%;
+        transition: all .3s ease-in;
+        padding: 1rem;
+        outline: var(--card-img-shadow) solid 1px;
+        border-radius: .25rem;
+        height: 200px;
+        
+        .icon {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: .75rem;
+            svg {
+                overflow: visible;
+            }
+        }
+        
+        .text {
+            :nth-child(n+1 of p) {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .topic-header {
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+        
+        &:hover {
+            background-color: rgba(240, 240, 240, 0.5);
+            color: black;
+            box-shadow: 0 0 .5rem grey inset;
+            transition: all .3s ease-in;
+        }
+    }
+
+}
+
+.favourite-list {
+    .cards-list-header, p {
+        text-align: center;
+
+        a {
+            color: inherit;
+        }
+    }
+}

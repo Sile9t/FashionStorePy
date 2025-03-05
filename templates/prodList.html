@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/_utilities.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src="../static/js/preload.js"></script>
+</head>
+<body>
+    <div id="header">
+        {% include '_header.html' %}
+    </div>
+    <main id="main" class="justify-content-around">
+        <nav class="pointer " aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+              <li class="breadcrumb-item"><a href="">New-In</a></li>
+            </ol>
+        </nav>
+        <div class="cards-list-wrapper">
+            <h2>ПОДАРКИ-БЕСТСЕЛЛЕРЫ ДЛЯ ЖЕНЩИН</h2>
+            <div class="filter-sort-group d-flex justify-content-end">
+                <div class="filter-btns flex-fill">
+                    <button type="button" class="all-filters filter-btn">
+                        Все фильтры
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                            <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="for-women filter-btn">
+                        для женщин
+                    </button>
+                    <button type="button" class="for-men filter-btn">
+                        для мужчин
+                    </button>
+                </div>
+                <div class="sort-direction btn-group d-flex justify-content-end">
+                    <button class="sort-btn dropdown-toggle" type="button" id="sort-dropdown" 
+                        data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        Сортировка
+                    </button>
+                    <ul class="sort-dropdown dropdown-menu dropdown-menu-end" aria-labelledby="sort-dropdown">
+                        <li><a class="dropdown-item active" href="">Выбор стилистов</a></li>
+                        <li><a class="dropdown-item" href="">Новинки</a></li>
+                        <li><a class="dropdown-item" href="">По убыванию цены</a></li>
+                        <li><a class="dropdown-item" href="">По возрастанию цены</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cards-wrapper d-flex flex-wrap justify-content-between">
+                <div class="card" title="топ с вырезом халтер">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod1">
+                        <label class="icon d-flex flex-row" for="prod1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                топ с вырезом халтер
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod2">
+                        <label class="icon d-flex flex-row" for="prod2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                TOM FORD
+                            </div>
+                            <div class="description">
+                                клатч с тиснением под кожу крокодила
+                            </div>
+                            <div class="cost">
+                                15 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod3">
+                        <label class="icon d-flex flex-row" for="prod3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                замшевая юбка миди
+                            </div>
+                            <div class="cost">
+                                25 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod4">
+                        <label class="icon d-flex flex-row" for="prod4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Saint Laurent
+                            </div>
+                            <div class="description">
+                                туфли д'Орсе
+                            </div>
+                            <div class="cost">
+                                10 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" title="топ с вырезом халтер">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod5">
+                        <label class="icon d-flex flex-row" for="prod5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                топ с вырезом халтер
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod6">
+                        <label class="icon d-flex flex-row" for="prod6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                TOM FORD
+                            </div>
+                            <div class="description">
+                                клатч с тиснением под кожу крокодила
+                            </div>
+                            <div class="cost">
+                                15 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod7">
+                        <label class="icon d-flex flex-row" for="prod7">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                замшевая юбка миди
+                            </div>
+                            <div class="cost">
+                                25 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod8">
+                        <label class="icon d-flex flex-row" for="prod8">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Saint Laurent
+                            </div>
+                            <div class="description">
+                                туфли д'Орсе
+                            </div>
+                            <div class="cost">
+                                10 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" title="топ с вырезом халтер">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod9">
+                        <label class="icon d-flex flex-row" for="prod9">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                топ с вырезом халтер
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod10">
+                        <label class="icon d-flex flex-row" for="prod10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                TOM FORD
+                            </div>
+                            <div class="description">
+                                клатч с тиснением под кожу крокодила
+                            </div>
+                            <div class="cost">
+                                15 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod11">
+                        <label class="icon d-flex flex-row" for="prod11">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                замшевая юбка миди
+                            </div>
+                            <div class="cost">
+                                25 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod2">
+                        <label class="icon d-flex flex-row" for="prod12">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Saint Laurent
+                            </div>
+                            <div class="description">
+                                туфли д'Орсе
+                            </div>
+                            <div class="cost">
+                                10 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" title="топ с вырезом халтер">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod13">
+                        <label class="icon d-flex flex-row" for="prod13">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                топ с вырезом халтер
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod14">
+                        <label class="icon d-flex flex-row" for="prod14">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                TOM FORD
+                            </div>
+                            <div class="description">
+                                клатч с тиснением под кожу крокодила
+                            </div>
+                            <div class="cost">
+                                15 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod5">
+                        <label class="icon d-flex flex-row" for="prod5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Prada
+                            </div>
+                            <div class="description">
+                                замшевая юбка миди
+                            </div>
+                            <div class="cost">
+                                25 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prod16">
+                        <label class="icon d-flex flex-row" for="prod16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prodList/prodPlaceholder.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Saint Laurent
+                            </div>
+                            <div class="description">
+                                туфли д'Орсе
+                            </div>
+                            <div class="cost">
+                                10 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards-list-footer d-flex flex-column align-items-end position-relative">
+                <div class="pages-indicator position-absolute bottom-50 start-50">
+                    <span id="currentPage">1</span> из <span id="totalPages">3</span>
+                </div>
+                <div class="cards-list-footer-btns d-inline-flex flex-column align-items-end">
+                    <button type="button" onclick="goTop()" class="up-btn" title="Наверх">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+                          </svg>
+                    </button>
+                    <button type="button" class="next-btn">
+                        Вперед
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                          </svg>
+                    </button>
+                    <a href="">
+                        <button type="button" class="purchases-btn">
+                            Перейти к покупкам
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="recently-viewed cards-list-wrapper">
+            <h3 class="cards-list-header">Недавно просмотрено</h3>
+            <div class="cards-wrapper d-flex flex-wrap justify-content-between">
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodViewed1">
+                        <label class="icon d-flex flex-row" for="prodViewed1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod5.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Simone Rocha
+                            </div>
+                            <div class="description">
+                                платье миди Creature
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodViewed2">
+                        <label class="icon d-flex flex-row" for="prodViewed2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod6.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Mugler
+                            </div>
+                            <div class="description">
+                                мюли Fang 20
+                            </div>
+                            <div class="cost">
+                                15 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodViewed3">
+                        <label class="icon d-flex flex-row" for="prodViewed3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod7.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Oroenza Schouler
+                            </div>
+                            <div class="description">
+                                пальто Finch
+                            </div>
+                            <div class="cost">
+                                45 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodViewed4">
+                        <label class="icon d-flex flex-row" for="prodViewed4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod8.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Docle & Gabana
+                            </div>
+                            <div class="description">
+                                сетчатая юбка-карандаш
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="recommendations-list cards-list-wrapper">
+            <h3 class="cards-list-header">Рекомендации</h3>
+            <div class="cards-wrapper d-flex flex-wrap justify-content-between">
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodRec1">
+                        <label class="icon d-flex flex-row" for="prodRec1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod5.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Simone Rocha
+                            </div>
+                            <div class="description">
+                                платье миди Creature
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodRec2">
+                        <label class="icon d-flex flex-row" for="prodRec2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod6.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Mugler
+                            </div>
+                            <div class="description">
+                                мюли Fang 20
+                            </div>
+                            <div class="cost">
+                                15 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodRec3">
+                        <label class="icon d-flex flex-row" for="prodRec3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod7.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Oroenza Schouler
+                            </div>
+                            <div class="description">
+                                пальто Finch
+                            </div>
+                            <div class="cost">
+                                45 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="favourite" title="Добавить в избранное">
+                        <input class="checkbox" type="checkbox" id="prodRec4">
+                        <label class="icon d-flex flex-row" for="prodRec4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path class="heart" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <a href="./product.html">
+                        <div class="card-body d-flex flex-column">
+                            <img src="../static/source/img/prod8.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="season">
+                                Новый сезон
+                            </div>
+                            <div class="brand">
+                                Docle & Gabana
+                            </div>
+                            <div class="description">
+                                сетчатая юбка-карандаш
+                            </div>
+                            <div class="cost">
+                                20 000 &#x20bd;
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="question-topics-wrapper d-flex flex-row justify-content-around">
+            <a href="">
+                <div class="order-topic topic d-flex flex-column">
+                    <div class="icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.53589 6.90909C9.53589 5.85473 10.4868 5 11.6599 5C12.8329 5 13.7839 5.85473 13.7839 6.90909C13.7839 7.40532 13.6046 7.85733 13.2925 8.19682C12.6948 8.84706 11.8015 9.50197 11.8015 10.3455V10.6299M11.8015 10.6299C12.533 10.6214 13.2674 10.8246 13.8845 11.2406L21.317 16.2509C22.6234 17.1315 21.9305 19 20.2975 19H3.70254C2.08721 19 1.38322 17.1648 2.65531 16.27L9.751 11.2787C10.3534 10.855 11.076 10.6383 11.8015 10.6299Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="text">
+                        <p class="topic-header">Как сделать заказ</p>
+                        <p class="topic-description">Подробная интсрукция для новых клиентов</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="order-topic topic d-flex flex-column">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                          </svg>
+                    </div>
+                    <div class="text">
+                        <p class="topic-header">Вопросы и ответы</p>
+                        <p class="topic-description">Все о доставке, возврате и пошлинах</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="order-topic topic d-flex flex-column">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24   " fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                          </svg>
+                    </div>
+                    <div class="text">
+                        <p class="topic-header">Нужна помощь?</p>
+                        <p class="topic-description">Обратитесь в нашу клиентскую службу</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="subscribe-wrapper d-flex flex-row justify-content-between">
+            <div class="header-wrapper d-flex flex-column">
+                <h2>НИЧЕГО НЕ ПРОПУСТИТЕ</h2>
+                <p>Подпишитесь на рассылку, чтобы быть в курсе скидок и главных новинок.</p>
+            </div>
+            <form method="post" class="subscribe-form d-flex flex-column">
+                <p class="header">Получать уведомления</p>
+                <div class="body">
+                    <div class="mail-sub d-flex flex-column">
+                        <div class="checkbox-wrapper d-flex">
+                            <input type="checkbox" name="" id="mail" title="Почта">
+                            <p>Почта</p>
+                        </div>
+                        <input type="text" placeholder="Email" id="email" autocomplete="email">
+                    </div>
+                    <div class="sms-sub d-flex flex-column">
+                        <div class="checkbox-wrapper d-flex align-content-center">
+                            <input type="checkbox" name="" id="sms" title="СМС">
+                            <p>СМС</p>
+                        </div>
+                        <input type="tel" placeholder="8..." id="phone" autocomplete="tel">
+                    </div>
+                    <button type="submit">Подписаться</button>
+                    <p>Регестрируясь, вы соглашаетесь получать маркетинговые сообщения по электронной почте и/или по СМС и подтверждаете, что ознакомились с "<a href="">Политикой конфеденциальности</a>". Чтобы отказаться от рассылки, нажмите на кнопку "Отписаться" в конце письма или ответьте STOP на наше СМС-сообщение</p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div id="footer">
+        {% include '_footer.html' %}
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="../static/js/ProdList.js"></script>
+</body>
+</html>

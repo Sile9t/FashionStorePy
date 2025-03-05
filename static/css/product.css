@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@import url('./_utilities.css');
+
+#main {
+    font-family: Inter;
+    margin: 0 10% 0 10%;
+
+    .imgs-short-name-wrapper {
+
+        .imgs {
+            width: 75%;
+            background-color: transparent;
+            border: 0;
+    
+            img {
+                width: 50%;
+                margin: .5vw 0;
+                object-fit: cover;
+            }
+            
+            :nth-child(n+3 of img) {
+                width: 32%;
+                aspect-ratio: 1 / 1.2;
+            }
+        }
+
+        .short-name-wrapper {
+            padding-left: 3rem;
+
+            .prod-name {
+                padding: .5rem;
+
+                .season {
+                    font-size: 1rem;
+                    margin: 0rem;
+                }
+
+                .brand {
+                    font-size: 20px;
+                    margin: 0rem;
+                }
+                
+                .cost {
+                    font-size: 20px;
+                }
+            }
+
+            .prod-sizes {
+                :nth-child(n+1 of .size){
+                    text-transform: uppercase;
+                    padding: .15rem;
+                    border: 1px solid rgba(0, 0, 0, .3);
+                    border-radius: .5rem;
+                    margin: .5rem;
+                    width: 3rem;
+                    text-align: center;
+                    box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .2), 
+                        .25rem .25rem .5rem rgba(0, 0, 0, .2) inset;
+                    font-size: 1rem;
+                }
+            }
+
+            .size-grid-wrapper {
+                margin: 2rem 0 1rem 0;
+
+                a {
+                    color: grey;
+                }
+            }
+
+            .prod-btns {
+                padding: .25rem 0rem;
+
+                :nth-child(n+1 of button) {
+                    margin-left: .5rem;
+                }
+            }
+
+            .delivery-info {
+                padding: .5rem;
+                text-transform: uppercase;
+
+                span {
+                    text-transform: none;
+                }
+            }
+        }
+    }
+
+    .full-desc-wrapper {
+        margin-bottom: 3rem;
+
+        .full-desc {
+            h2 {
+                text-transform: uppercase;
+            }
+
+            .info {
+
+                .main-info {
+                    margin-right: 3rem;
+    
+                    .prod-name {
+                        margin: 1rem 0rem;
+                        :nth-child(n+1 of p){
+                            margin: 0;
+                        }
+                        
+                        .brand {
+                            font-weight: 600;
+                        }
+                    }
+        
+                    .about-prod {
+                        font-size: 1rem;
+                        font-weight: 500;
+    
+                        h3 {
+                            font-size: 1rem;
+                        }
+
+                        ul {
+                            list-style: square;
+                        }
+                    }
+                }
+
+                .other-info {
+                    margin-top: 1rem;
+
+                    :nth-child(n+1 of div) {
+                        margin: 1rem;
+                        
+                        .header {
+                            font-weight: 600;
+                            margin: 0;
+                        }
+
+                        .text {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+}
+
+#imgsModal {
+    .modal-dialog {
+        .modal-content {
+            .modal-header {
+                .btn-close {
+                    width: 1.3vw;
+                    height: 1.3vw;
+                    background-size: 1.3vw 1.3vw;
+                }
+            }
+
+            .modal-body {
+                .carousel {
+                    padding-bottom: 3vw;
+                    .carousel-indicators {
+                        button {
+                            width: 4vw;
+                            height: .23vw;
+                            border-radius: .63vw;
+                            opacity: .3;
+
+                            &.active {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .carousel-inner {
+                        .carousel-item {
+                            justify-items: center;
+
+                            img {
+                                object-fit: cover;
+                                height: 40vw;
+                            }
+                        }
+                        
+                    }
+
+                    .carousel-control-prev {
+                        .carousel-control-prev-icon {
+                            width: 3vw;
+                            height: 3vw;
+                        }
+                    }
+
+                    .carousel-control-next {
+                        .carousel-control-next-icon {
+                            width: 3vw;
+                            height: 3vw;
+                        }
+                    }
+                }
+            }
+
+            .modal-footer {
+
+            }
+        }
+    }
+}
