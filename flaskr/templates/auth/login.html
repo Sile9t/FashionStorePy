@@ -14,17 +14,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <h5 class="modal-title">Войдите в аккаунт</h5>
-                    <form id="sign-in-form" action="{{ url_for('auth.login') }}" method="post" class="d-flex flex-column justify-content-between">
-                        <div class="email-wrapper d-flex flex-column">
-                            <label for="loginEmail">Email</label>
-                            <input type="email" name="Email" id="loginEmail">
-                        </div>
-                        <div class="pass-wrapper d-flex flex-column">
-                            <label for="loginPass">Пароль</label>
-                            <input type="password" name="pass" id="loginPass">
-                        </div>
-                        <button type="submit">Войти</button>
-                    </form>
+                    {% include './scaffolds/auth/loginForm.html' %}
                     <div class="sign-in-separator">
                         <p>или</p>
                     </div>

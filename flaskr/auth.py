@@ -1,7 +1,7 @@
 import functools
 
 from flask import (
-    Blueprint, flash, g, redirect, render_template, request, session, url_for
+    Blueprint, flash, g, redirect, render_template, request, session, url_for, make_response
 )
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -12,15 +12,15 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST' :
-        login = request.form['name']
+        name = request.form['name']
         email = request.form['email']
         password = request.form['password']
         db = get_db()
         error = None
 
-        flash("Values from form: login={login}, email={email}, password={password}")
+        flash(f"Values from form: name={name}, email={email}, password={password}")
 
-        if not login:
+        if not name:
             error = 'Login is required!\n'
         elif not password:
             error = 'Password is required!\n'
@@ -28,17 +28,18 @@ def register():
         if error is None:
             try:
                 db.execute(
-                    "INSERT INTO user (login, email, password) VALUES (?,?,?)",
-                    (login, email, generate_password_hash(password)),
+                    "INSERT INTO user (name, email, password) VALUES (?,?,?)",
+                    (name, email, generate_password_hash(password)),
                 )
                 db.commit()
             except db.IntegrityError:
-                error = f"User {login} is already exists!"
+                error = f"User {name} is already exists!"
             else:
                 return redirect(url_for('auth.login'))
             
         flash(error)
-    
+    # TODO: redirect to previous page\
+    # return make_response('', 401)
     return render_template('auth/register.html')
 
 @bp.route('/login', methods=['GET', 'POST'])
@@ -55,7 +56,7 @@ def login():
 
         if user is None:
             error = "No user with email '{email}'!\n"
-        elif not check_password_hash(user[password], password):
+        elif not check_password_hash(user['password'], password):
             error = 'Wrong password!\n'
         
         if error is None:

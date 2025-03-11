@@ -1,7 +1,6 @@
 import os
-
+from database.db import session
 from flask import Flask, render_template
-from flask_session import Session
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -20,6 +19,10 @@ def create_app(test_config=None):
     except OSError:
         pass
     
+    @app.teardown_appcontext
+    def shutdown_session(exception=None):
+        session.remove()
+        
     @app.route('/')
     def index():
         return render_template('index.html')
@@ -27,7 +30,7 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
     
-    from . import auth
-    app.register_blueprint(auth.bp)
+    # from . import auth
+    # app.register_blueprint(auth.bp)
 
     return app
