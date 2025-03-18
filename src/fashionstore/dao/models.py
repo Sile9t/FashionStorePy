@@ -8,17 +8,8 @@ from src.fashionstore.dao.database import Base
 uniq_str_an = Annotated[str, mapped_column(unique=True)]
 uniq_index_str_an = Annotated[str, mapped_column(unique=True, index=True)]
 
-# class Base(AsyncAttrs, DeclarativeBase):
-#     __abstract__ = True
-
-#     @classmethod
-#     @property
-#     @declared_attr.directive
-#     def __tablename__(cls) -> str:
-#         return cls.__name__.lower() + 's'
-
 class User(Base):
-    # id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     username: Mapped[uniq_index_str_an]
     email: Mapped[uniq_index_str_an]
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
@@ -26,8 +17,7 @@ class User(Base):
     last_name: Mapped[str | None] = mapped_column(String(50))
     phone: Mapped[str] = mapped_column(String(20), CheckConstraint("LENGTH(phone) >= 10"))
     address: Mapped[str]
-    # created_at: Mapped[datetime] = mapped_column(TIMESTAMP, server_default=func.now())
-
+    
     # cart_items = relationship("Cart", back_populates="user", cascade="all, delete-orphan")
     # favourites = relationship("Favourite", back_populates="user", cascade="all, delete-orphan")
     # orders = relationship("Order", back_populates="user", cascade="all, delete-orphan")
@@ -67,7 +57,7 @@ class Brand(Base):
         return f"<Brand (name={self.name}, country={self.country}, website={self.website})>"
     
 class ClothingType(Base):
-    # id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[uniq_index_str_an] = mapped_column(String(100))
 
     clothings: Mapped[List["Clothing"] | None] = relationship(
@@ -79,14 +69,13 @@ class ClothingType(Base):
         self.name = name
 
 class Clothing(Base):
-    # id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     description: Mapped[str | None]
     brand_id: Mapped[int] = mapped_column( ForeignKey("brands.id"), index=True)
     type_id: Mapped[int] = mapped_column( ForeignKey("clothingtypes.id"), index=True)
     price: Mapped[float] = mapped_column(Float, CheckConstraint("price >= 0"), nullable=False)
-    # created_at: Mapped[datetime] = mapped_column(TIMESTAMP, default=func.now())
-
+    
     brand: Mapped["Brand"] = relationship("Brand", back_populates="clothings")
     type: Mapped["ClothingType"] = relationship("ClothingType", back_populates="clothings")
     # materials = relationship("Material", secondary=clothing_materials, back_populates="clothing")
