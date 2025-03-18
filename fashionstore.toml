@@ -1,9 +1,12 @@
 [project]
 name = "FashionStore"
-varsion = "0.1.0"
-description = "Project for store of fashion clothings."
-dependencies = "requirements.txt"
-readme = "README.md"
+version = "0.1.0"
+authors = [
+    #may be later
+]
+description = "Project for store of fashion clothing."
+dependencies = 'requirements.txt'
+readme = 'README.md'
 
 [project.urls]
 
