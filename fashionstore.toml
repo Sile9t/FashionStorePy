@@ -1,0 +1,12 @@
+[project]
+name = "FashionStore"
+varsion = "0.1.0"
+description = "Project for store of fashion clothings."
+dependencies = "requirements.txt"
+readme = "README.md"
+
+[project.urls]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
