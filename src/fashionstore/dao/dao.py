@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from dao.base import BaseDAO
-from models import User, Brand, ClothingType, Clothing
+from .base import BaseDAO
+from .models import User, Brand, ClothingType, Clothing
 
 class UserDAO(BaseDAO[User]):
     model = User

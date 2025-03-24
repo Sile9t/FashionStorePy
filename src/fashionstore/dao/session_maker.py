@@ -4,7 +4,7 @@ from loguru import logger
 from sqlalchemy.ext.asyncio import async_sessionmaker, AsyncSession
 from sqlalchemy import text
 from functools import wraps
-from src.fashionstore.dao.database import async_session_maker
+from ..dao.database import async_session_maker
 
 class DatabaseSessionManager:
     """

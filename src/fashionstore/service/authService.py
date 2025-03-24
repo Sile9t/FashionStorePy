@@ -1,9 +1,7 @@
 from pydantic import BaseModel
-from src.fashionstore.dao.schemas import UserCreateDto, UserDto
-from src.fashionstore.dao.dao import UserDAO
-from src.fashionstore.dao.session_maker import connection
+from ..dao.schemas import UserCreateDto, UserDto
+from ..dao.dao import UserDAO
 from sqlalchemy.ext.asyncio import AsyncSession
-from ..containers import Container, session_dependency, DatabaseSessionManager
 from dependency_injector.wiring import Provide
 from .baseService import BaseService
 

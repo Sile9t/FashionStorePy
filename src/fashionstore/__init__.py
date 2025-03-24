@@ -2,11 +2,14 @@ import os
 from flask import Flask, render_template
 from config import settings
 from loguru import logger
-from src.fashionstore.dao.session_maker import async_session_maker
+from .dao.database import async_session_maker
 from .containers import Container
 
 def create_app(test_config=None):
     container = Container()
+    
+    db = container.db()
+    db.create_database()
     
     app = Flask(__name__, instance_relative_config=True)
     # app.config.from_mapping(
@@ -16,9 +19,6 @@ def create_app(test_config=None):
     app.config = settings
     app.container = container
 
-    sessionManager = container.sessionManager
-    SessionDep = sessionManager.get_session
-    TransactionSessionDep = sessionManager.get_transaction_session
     
     if test_config in None:
         app.config.from_file('config.py', silent=True)
@@ -35,11 +35,11 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return "Hello! This is index page."
-        # return render_template('index.html')
+        # return "Hello! This is index page."
+        return render_template('index.html')
     
-    # from .controllers import auth, brand
-    # app.register_blueprint(auth.bp)
-    # app.register_blueprint(brand.bp)
+    from .controllers import auth, brand
+    app.register_blueprint(auth.bp)
+    app.register_blueprint(brand.bp)
 
     return app

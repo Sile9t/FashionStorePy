@@ -14,7 +14,7 @@ class UserAbsDto(BaseModel):
     phone: str | None
     address: str | None
 
-    config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)
 
 
 class UserCreateDto(UserAbsDto):
@@ -35,7 +35,7 @@ class BrandDto(BaseModel):
     country: str
     website: str | None
 
-    config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)
 
 
 """
@@ -45,7 +45,7 @@ class ClothingTypeDto(BaseModel):
     id: int = Field(frozen=True)
     name: str
 
-    config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)
 
 
 """
@@ -61,4 +61,4 @@ class ClothingDto(BaseModel):
     type: ClothingTypeDto | None
     price: float = Field(ge=0)
 
-    config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)
