@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from dao.base import BaseDAO
-from models import User
+from models import User, Brand, ClothingType, Clothing
 
 class UserDAO(BaseDAO[User]):
     model = User
@@ -11,3 +11,17 @@ class UserDAO(BaseDAO[User]):
         
     #     return user
     
+class BrandDAO(BaseDAO[Brand]):
+    model = Brand
+
+class ClothingTypeDAO(BaseDAO[ClothingType]):
+    model = ClothingType
+
+class ClothingDAO(BaseDAO[Clothing]):
+    model = Clothing
+
+class DAOManager():
+    User = UserDAO
+    Brand = BrandDAO
+    ClothingType = ClothingTypeDAO
+    Clothing = ClothingDAO

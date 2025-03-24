@@ -1,1 +1,28 @@
 Generic single-database configuration with an async dbapi.
+
+## Alembic commands
+- To init alembic
+
+```
+    alembic init -t async migration
+```
+
+- For generate new migration script
+
+```
+    alembic revision --autogenerate -m "Revision-commit"
+```
+
+- To apply all migrations to db
+
+```
+    alembic upgrade head
+    alembic upgrade *migration_number*
+```
+
+- To discard mimgration
+
+```
+    alembic downgrade -1
+    alembic downgrade *migration_number*
+```
