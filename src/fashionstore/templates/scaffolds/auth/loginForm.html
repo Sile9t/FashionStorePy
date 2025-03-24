@@ -1,0 +1,12 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}"> -->
+<form id="sign-in-form" action="{{ url_for('auth.login') }}" method="post" class="d-flex flex-column justify-content-between">
+    <div class="email-wrapper d-flex flex-column">
+        <label for="loginEmail">Email</label>
+        <input type="email" name="email" id="loginEmail">
+    </div>
+    <div class="pass-wrapper d-flex flex-column">
+        <label for="loginPass">Пароль</label>
+        <input type="password" name="password" id="loginPass">
+    </div>
+    <button type="submit">Войти</button>
+</form>

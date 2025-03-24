@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block header %}
+    <h1>{% block title %} Register {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 class="modal-title">Войдите в аккаунт</h5>
+                    {% include './scaffolds/auth/loginForm.html' %}
+                    <div class="sign-in-separator">
+                        <p>или</p>
+                    </div>
+                    <div class="oauth-btns d-flex flex-column">
+                        <div class="google-btn oauth-btn d-flex flex-row">
+                            <button type="button">Войти через Google</button>
+                            <img src="../../static/source/logos/google-logo.svg" alt="">
+                        </div>
+                        <div class="vk-btn oauth-btn d-flex flex-row">
+                            <button type="button">Войти через ВКонтакте</button>
+                            <img src="../../static/source/logos/vk-logo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

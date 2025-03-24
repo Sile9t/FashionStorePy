@@ -1,18 +1,16 @@
 import os
+from configobj import ConfigObj
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-try:
-    instancePath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "instance")
-    os.makedirs(instancePath)
-except OSError:
-    pass
+config = ConfigObj("config.ini")
 
 class Settings(BaseSettings):
-    DB_USER: str
-    DB_PASSWORD: str
-    DB_HOST: str
-    DB_PORT: str
-    DB_NAME: str
+    DB_USER: str = config['database']['user']
+    DB_PASSWORD: str = config['database']['password']
+    DB_HOST: str = config['database']['host']
+    DB_PORT: str = config['database']['port']
+    DB_NAME: str = config['database']['postgres']['name']
+
     FORMAT_LOG: str = "{time:YYYY-MM-DD at HH:mm:ss} | {level} | {message}"
     LOG_ROTATION: str = "10 MB"
     
@@ -20,9 +18,8 @@ class Settings(BaseSettings):
         env_file=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
     )
 
-    
     def get_db_url(self):
-        return (f"sqlite+aiosqlite:///instance/db.sqlite3") # connection for local async sqlite db
+        return (f"sqlite+aiosqlite:///instance/{config['database']['sqlite']['name']}") # connection for local async sqlite db
         return (f"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASSWORD}@"
                 f"{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}") #connection for remote async postgres db
     

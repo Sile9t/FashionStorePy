@@ -1,0 +1,597 @@
+<head>
+    <link rel="stylesheet" href="../static/css/_header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+</head>
+<body>
+    <header class="d-flex flex-column justify-content-center">
+        <div class="header-notice d-flex justify-content-center">
+            <span>Бесплатная доставка на заказы от 2500 Р | Бесплатный возврат в течение 30 дней</span>
+        </div>
+        <div class="h1-and-navbar-wrapper d-flex flex-column justify-content-center">
+            <h1 class="d-flex justify-content-center align-items-end">
+                <a href="./index.html">F<span>AShi</span>ON</a>
+            </h1>
+            <div class="navbar-wrapper d-flex justify-content-center">
+                <ul class="navbar d-inline-flex justify-content-between">
+                    <li><a href="./index.html">Для нее</a></li>
+                    <li><a href="./indexForHim.html">Для него</a></li>
+                    <li><a href="./indexForChildren.html">Для детей</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-and-search-wrapper d-flex">
+            <ul class="navbar d-inline-flex flex-fill justify-content-between align-content-end">
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#presents-external-content" 
+                        aria-controls="presents-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Подарки
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#new-external-content" 
+                        aria-controls="new-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Новинки
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#brands-external-content" 
+                        aria-controls="brands-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Бренды
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#clothes-external-content" 
+                        aria-controls="clothes-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Одежда
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#shoes-external-content" 
+                        aria-controls="shoes-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Обувь
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accessories-external-content" 
+                        aria-controls="accessories-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Аксессуары
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#decorations-external-content" 
+                        aria-controls="decorations-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Украшения
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#household-goods-external-content" 
+                        aria-controls="household-goods-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Товары для дома
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#pre-owned-external-content" 
+                        aria-controls="pre-owned-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Подарки Pre-owned
+                    </button>
+                </li>
+                <li>
+                    <button class="navbar collapse-btn sale" type="button" data-bs-toggle="collapse" data-bs-target="#sale-external-content" 
+                        aria-controls="sale-external-content" aria-expanded="false" aria-label="Toggle navigation">
+                        Распродажа
+                    </button>
+                </li>
+            </ul>
+            <div class="icons-search-wrapper d-flex flex-column">
+                <div class="icons-wrapper d-flex flex-row justify-content-around align-content-center">
+                    <div class="globe-icon icon">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="person-wrapper d-flex flex-row align-items-top">
+                        <input type="hidden" id="userIsLogged" value="false">
+                        <div class="person-icon icon dropdown">
+                            <button class="d-flex flex-row" type="button" id="profile" title="Профиль" data-bs-toggle="modal" data-bs-target="#sign-in">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                </svg>
+                                <div class="text-info d-flex flex-row justify-content-between align-items-center visually-hidden">
+                                    <p class="user-name text">Maria</p>
+                                    <p class="user-rank text">Bronze</p>
+                                </div>
+                            </button>
+                            <div class="profile-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+                                <div class="profile-dropdown-menu-content">
+                                    <svg class="bi bi-caret-up-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                    </svg>
+                                    <div class="dropdown-menu-header">
+                                        <div class="btn-close-wrapper d-flex flew-row justify-content-end">
+                                            <button type="button" class="btn-close" aria-label="Close"></button>
+                                        </div>
+                                        <h5 class="user-name modal-title text" id="profileModalLabel">Maria</h5>
+                                    </div>
+                                    <div class="dropdown-menu-body">
+                                        <ul class="dropdown-menu-list">
+                                            <li><a class="dropdown-item" href="">Программа лояльности</a></li>
+                                            <li><a class="dropdown-item" href="">Заказы и возвраты</a></li>
+                                            <li><a class="dropdown-item" href="">Кредит</a></li>
+                                            <li><a class="dropdown-item" href="">Личные данные и безопасность</a></li>
+                                            <li><a class="dropdown-item" href="">Настройки и предпочтения</a></li>
+                                            <li><a class="dropdown-item" href="">Реферальная программа</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="into-account-btn-wrapper d-flex flex-row justify-content-end">
+                                        <a href="">
+                                            <button class="into-account-btn" type="button">В личный кабинет</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-icon icon">
+                        <a href="./favourites.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="purchases-icon icon">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="search-wrapper d-flex flex-row align-items-center">
+                    <input type="search" id="search" name="" placeholder="Поиск">
+                    <div class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(80, 80, 80, 0.5)" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="collpase-wrapper">
+        <div class="modal-body collapse" data-bs-parent="#new-external-content" id="presents-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Подарки</h3>
+                        <ul>
+                            <li><a href="./prodList.html">Подарки-бестселлеры</a></li>
+                            <li><a href="">Приятные мелочи</a></li>
+                            <li><a href="">Лучшие аксессуары</a></li>
+                            <li><a href="">Культовые сумки pre-owned</a></li>
+                            <li><a href="">Часы и украшения</a></li>
+                            <li><a href="">Подарки: товары для дома</a></li>
+                            <li><a href="">Необычные подарки</a></li>
+                            <li><a href="">Эксклюзивные подарки</a></li>
+                            <li><a href="">Подарки для него</a></li>
+                            <li><a href="">Подарки для детей</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>По цене</h3>
+                        <ul>
+                            <li><a href="">Подарки от 500 &#x20bd;</a></li>
+                            <li><a href="">Подарки от 2000 &#x20bd;</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/presentsExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Лучшие подарки</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="new-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Новый сезон</h3>
+                        <ul>
+                            <li><a href="">Новинки</a></li>
+                            <li><a href="">Классика</a></li>
+                            <li><a href="">Тренды</a></li>
+                            <li><a href="">Элегантность</a></li>
+                            <li><a href="">StreetWear</a></li>
+                            <li><a href="">Женственность</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Тренды</h3>
+                        <ul>
+                            <li><a href="">Новый сезон</a></li>
+                            <li><a href="">Осенняя обувь</a></li>
+                            <li><a href="">Прозрачные детали</a></li>
+                            <li><a href="">Замша</a></li>
+                            <li><a href="">Бестселлеры</a></li>
+                            <li><a href="">Эксклюзивы</a></li>
+                            <li><a href="">Блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Специально для вас</h3>
+                        <ul>
+                            <li><a href="">Ваша еженедельная подборка</a></li>
+                            <li><a href="">Новинки в вашем стиле</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/newExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Новая классика</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="brands-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Популярные бренды</h3>
+                        <ul>
+                            <li><a href="">Alexander McQueen</a></li>
+                            <li><a href="">Balenciaga</a></li>
+                            <li><a href="">Baiman</a></li>
+                            <li><a href="">Brunello & Cucinelli</a></li>
+                            <li><a href="">Doice & Gabanna</a></li>
+                            <li><a href="">Fendi</a></li>
+                            <li><a href="">Gucci</a></li>
+                            <li><a href="">Jacquemus</a></li>
+                            <li><a href="">Mlu Mlu</a></li>
+                            <li><a href="">Prada</a></li>
+                            <li><a href="">Saint Laurent</a></li>
+                            <li><a href="">Valentino Garavani</a></li>
+                        </ul>
+                        <a class="more" href="./brandsList.html">Посмотреть все бренды</a>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/brandsExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Бренд недели</p>
+                        <h3>Prada</h3>
+                        <a href="">Посмотреть коллекцию</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="clothes-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Одежда</h3>
+                        <ul>
+                            <li><a href="">Все категории</a></li>
+                            <li><a href="">Спортивная одежда</a></li>
+                            <li><a href="">Пляжная одежда</a></li>
+                            <li><a href="">Пуховики и пальто</a></li>
+                            <li><a href="">Деним</a></li>
+                            <li><a href="">Платья</a></li>
+                            <li><a href="">Куртки и жакеты</a></li>
+                            <li><a href="">Трикотаж</a></li>
+                            <li><a href="">Нижнее белье</a></li>
+                            <li><a href="">Юбки</a></li>
+                            <li><a href="">Топы</a></li>
+                            <li><a href="">Брюки</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Выбор</h3>
+                        <ul>
+                            <li><a href="">Новинки</a></li>
+                            <li><a href="">Свадебные наряды</a></li>
+                            <li><a href="">Гардероб для вечеринок</a></li>
+                            <li><a href="">Гардероб для отпуска</a></li>
+                            <li><a href="">Базовый гардероб</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Наши сервисы</h3>
+                        <ul>
+                            <li><a href="">Ресейл на обновление гардероба</a></li>
+                            <li><a href="">Pre-owned</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/clothesExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Трикотаж</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="shoes-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Обувь</h3>
+                        <ul>
+                            <li><a href="">Все категории</a></li>
+                            <li><a href="">Балетки</a></li>
+                            <li><a href="">Пляжная обувь</a></li>
+                            <li><a href="">Ботинки и сапоги</a></li>
+                            <li><a href="">Эспандрилья</a></li>
+                            <li><a href="">Лоферы</a></li>
+                            <li><a href="">Моли</a></li>
+                            <li><a href="">Туфли</a></li>
+                            <li><a href="">Сандали</a></li>
+                            <li><a href="">Кроссовки</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Выбор</h3>
+                        <ul>
+                            <li><a href="">Новинки</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Наши сервисы</h3>
+                        <ul>
+                            <li><a href="">Ресейл на обновление гардероба</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/shoesExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Осенняя обувь</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="accessories-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Аксессуары</h3>
+                        <ul>
+                            <li><a href="">Все категории</a></li>
+                            <li><a href="">Сумки</a></li>
+                            <li><a href="">Рюкзаки</a></li>
+                            <li><a href="">Ремни</a></li>
+                            <li><a href="">Очки</a></li>
+                            <li><a href="">Аксессуары для волос</a></li>
+                            <li><a href="">Головные уборы</a></li>
+                            <li><a href="">Шарфы</a></li>
+                            <li><a href="">Кошельки</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Выбор</h3>
+                        <ul>
+                            <li><a href="">Подарки</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/accessoriesExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Головные уборы</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="decorations-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Украшения</h3>
+                        <ul>
+                            <li><a href="">Все категории</a></li>
+                            <li><a href="">Браслеты</a></li>
+                            <li><a href="">Серьги</a></li>
+                            <li><a href="">Ожерелье и колье</a></li>
+                            <li><a href="">Кольца</a></li>
+                            <li><a href="">Часы</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Ювелирные изделия</h3>
+                        <ul>
+                            <li><a href="">Все ювелирные изделия</a></li>
+                            <li><a href="">Все demi-fine украшения</a></li>
+                            <li><a href="">Браслеты</a></li>
+                            <li><a href="">Серьги</a></li>
+                            <li><a href="">Кольца</a></li>
+                            <li><a href="">Часы премиум-класса</a></li>
+                            <li><a href="">Ювелирные изделия pre-owned</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/newExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Ювелирные изделия</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="household-goods-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Товары для дома</h3>
+                        <ul>
+                            <li><a href="">Все категории</a></li>
+                            <li><a href="">Наушники и колонки</a></li>
+                            <li><a href="">Свечи и ароматы для дома </a></li>
+                            <li><a href="">Коллекционные предметы</a></li>
+                            <li><a href="">Столовая и кухня</a></li>
+                            <li><a href="">Мебель</a></li>
+                            <li><a href="">Декор</a></li>
+                            <li><a href="">Аксессуары для животных</a></li>
+                            <li><a href="">Текстиль</a></li>
+                            <li><a href="">Канцелярия</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar d-inline-flex flex-column justify-content-start">
+                        <h3>Популярные бренды</h3>
+                        <ul>
+                            <li><a href="">Medicon Toy</a></li>
+                            <li><a href="">Trudon</a></li>
+                            <li><a href="">POLSPOTTEN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/householdGoodsExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Товары для дома</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="pre-owned-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Архивные коллекции</h3>
+                        <ul>
+                            <li><a href="">Все категории</a></li>
+                            <li><a href="">Аксессуары</a></li>
+                            <li><a href="">Сумки</a></li>
+                            <li><a href="">Пуховики и пальто</a></li>
+                            <li><a href="">Платья</a></li>
+                            <li><a href="">Часы премиум-класса</a></li>
+                            <li><a href="">Ювелирные изделия</a></li>
+                            <li><a href="">Украшения</a></li>
+                            <li><a href="">Куртки и жакеты</a></li>
+                            <li><a href="">Часы</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/preOwnedExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Актуально</p>
+                        <h3>Hermes Pre-owned</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body collapse" id="sale-external-content">
+            <div class="d-flex flex-row">
+                <div class="navbars-wrapper d-flex flex-fill">
+                    <div class="navbar d-flex flex-column justify-content-start">
+                        <h3>Распродажа</h3>
+                        <ul>
+                            <li><a href="">Все категории</a></li>
+                            <li><a href="">Одежда</a></li>
+                            <li><a href="">Платья</a></li>
+                            <li><a href="">Куртки и пиджаки</a></li>
+                            <li><a href="">Топы</a></li>
+                            <li><a href="">Обувь</a></li>
+                            <li><a href="">Босоножки</a></li>
+                            <li><a href="">Сумки</a></li>
+                            <li><a href="">Аксессуары</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relevant-wrapper">
+                    <img src="../static/source/img/navigationExternal/saleExt.png" alt="">
+                    <div class="text-wrapper">
+                        <p>Для нее</p>
+                        <h3>Распродажа</h3>
+                        <a href="">Посмотреть подборку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include './scaffolds/auth/auth.html' %}
+    <!-- <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title">Войдите или создайте аккаунт</h5>
+                    <div class="btns-wrapper d-flex flex-row justify-content-between">
+                        <button type="button" id="sign-in-btn" onclick="showForm(this)" data-bs-target="#sign-in-form" class="selected">Войти</button>
+                        <button type="button" id="reg-btn" onclick="showForm(this)" data-bs-target="#reg-form">Создать аккаунт</button>
+                    </div>
+                    <form id="sign-in-form" action="sign-in" method="post" class="d-flex flex-column justify-content-between">
+                        <div class="email-wrapper d-flex flex-column">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" name="Email" id="loginEmail">
+                        </div>
+                        <div class="pass-wrapper d-flex flex-column">
+                            <label for="loginPass">Пароль</label>
+                            <input type="password" name="pass" id="loginPass">
+                        </div>
+                        <button type="submit">Войти</button>
+                    </form>
+                    <form id="reg-form" action="register" method="post" class="d-flex flex-column justify-content-between visually-hidden">
+                        <div class="name-wrapper d-flex flex-column">
+                            <label for="name">Имя</label>
+                            <input type="text" name="Name" id="name">
+                        </div>
+                        <div class="email-wrapper d-flex flex-column">
+                            <label for="regEmail">Email</label>
+                            <input type="email" name="Email" id="regEmail">
+                        </div>
+                        <div class="pass-wrapper d-flex flex-column">
+                            <label for="regPass">Пароль</label>
+                            <input type="password" name="pass" id="regPass">
+                        </div>
+                        <p>Регистрируясь, вы вступаете в программу и соглашаетесь с документами "Условия пользования" и "Политика конфиденциальности".</p>
+                        <div class="subscribe-wrapper d-flex flex-row">
+                            <input type="checkbox" name="Subscribe" id="subscribe">
+                            <label for="subscribe">Подписаться на рассылку, чтобы не пропускать новые привелегии и коллекции любимых брендов.</label>
+                        </div>
+                        <button type="submit">Зарегистрироваться</button>
+                    </form>
+                    <div class="sign-in-separator">
+                        <p>или</p>
+                    </div>
+                    <div class="oauth-btns d-flex flex-column">
+                        <div class="google-btn oauth-btn d-flex flex-row">
+                            <button type="button">Войти через Google</button>
+                            <img src="../static/source/logos/google-logo.svg" alt="">
+                        </div>
+                        <div class="vk-btn oauth-btn d-flex flex-row">
+                            <button type="button">Войти через ВКонтакте</button>
+                            <img src="../static/source/logos/vk-logo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../static/js/_header.js"></script>
+</body>

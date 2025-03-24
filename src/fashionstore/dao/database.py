@@ -2,8 +2,8 @@ from contextlib import AbstractContextManager, contextmanager
 from datetime import datetime
 from typing import Annotated, Callable
 from loguru import logger
-from sqlalchemy import TIMESTAMP, Integer, func, orm
-from sqlalchemy.orm import declared_attr, DeclarativeBase, Mapped, mapped_column, scoped_session
+from sqlalchemy import TIMESTAMP, Integer, func, orm, create_engine
+from sqlalchemy.orm import declared_attr, DeclarativeBase, Mapped, mapped_column, scoped_session, sessionmaker
 from sqlalchemy.ext.asyncio import AsyncAttrs, create_async_engine, async_sessionmaker, AsyncSession, async_scoped_session
 from config import settings
 
@@ -31,9 +31,9 @@ class Base(AsyncAttrs, DeclarativeBase):
 class Database:
 
     def __init__(self, db_url: str) -> None:
-        self._engine = create_async_engine(db_url, echo=True)
+        self._engine = create_engine(db_url, echo=True)
         self._session_factory = orm.scoped_session(
-            async_sessionmaker(
+            orm.sessionmaker(
                 autocommit=False,
                 autoflush=False,
                 bind=self._engine,

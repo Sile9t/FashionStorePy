@@ -1,0 +1,21 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}"> -->
+<form id="reg-form" action="{{ url_for('auth.register') }}" method="post" class="d-flex flex-column justify-content-between visually-hidden">
+    <div class="name-wrapper d-flex flex-column">
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div class="email-wrapper d-flex flex-column">
+        <label for="regEmail">Email</label>
+        <input type="email" name="email" id="regEmail">
+    </div>
+    <div class="pass-wrapper d-flex flex-column">
+        <label for="regPass">Пароль</label>
+        <input type="password" name="password" id="regPass">
+    </div>
+    <p>Регистрируясь, вы вступаете в программу и соглашаетесь с документами "Условия пользования" и "Политика конфиденциальности".</p>
+    <div class="subscribe-wrapper d-flex flex-row">
+        <input type="checkbox" name="Subscribe" id="subscribe">
+        <label for="subscribe">Подписаться на рассылку, чтобы не пропускать новые привелегии и коллекции любимых брендов.</label>
+    </div>
+    <button type="submit">Зарегистрироваться</button>
+</form>

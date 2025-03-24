@@ -1,27 +1,24 @@
 import os
+import sys
+from configobj import ConfigObj
 from flask import Flask, render_template
-from config import settings
 from loguru import logger
 from .dao.database import async_session_maker
 from .containers import Container
+from config import settings
 
 def create_app(test_config=None):
     container = Container()
     
     db = container.db()
-    db.create_database()
     
     app = Flask(__name__, instance_relative_config=True)
-    # app.config.from_mapping(
-    #     SECRET_KEY='dev',
-    #     DATABASE=settings.get_db_url()
-    # )
-    app.config = settings
-    app.container = container
-
     
-    if test_config in None:
-        app.config.from_file('config.py', silent=True)
+    app.container = container
+    logger.info("DI container is connected to application")
+    
+    if test_config is None:
+        app.config.from_file('config.py', 'config.py',silent=True)
     else:
         app.config.from_mapping(test_config)
     
@@ -38,8 +35,8 @@ def create_app(test_config=None):
         # return "Hello! This is index page."
         return render_template('index.html')
     
-    from .controllers import auth, brand
+    from .controllers import auth
     app.register_blueprint(auth.bp)
-    app.register_blueprint(brand.bp)
+    # app.register_blueprint(brand.bp)
 
     return app

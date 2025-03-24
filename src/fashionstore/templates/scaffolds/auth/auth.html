@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+<div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title">Войдите или создайте аккаунт</h5>
+                    <div class="btns-wrapper d-flex flex-row justify-content-between">
+                        <button type="button" id="sign-in-btn" onclick="showForm(this)" data-bs-target="#sign-in-form" class="selected">Войти</button>
+                        <button type="button" id="reg-btn" onclick="showForm(this)" data-bs-target="#reg-form">Создать аккаунт</button>
+                    </div>
+                    {% include './scaffolds/auth/loginForm.html' %}
+                    {% include './scaffolds/auth/registerForm.html' %}
+                    <div class="sign-in-separator">
+                        <p>или</p>
+                    </div>
+                    <div class="oauth-btns d-flex flex-column">
+                        <div class="google-btn oauth-btn d-flex flex-row">
+                            <button type="button">Войти через Google</button>
+                            <img src="../static/source/logos/google-logo.svg" alt="">
+                        </div>
+                        <div class="vk-btn oauth-btn d-flex flex-row">
+                            <button type="button">Войти через ВКонтакте</button>
+                            <img src="../static/source/logos/vk-logo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

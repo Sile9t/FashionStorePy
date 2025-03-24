@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+:root {
+    --footer-bg: #E6E6E6;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("../source/font/Inter-VariableFont_opsz\,wght.ttf");
+    font-weight: 300;
+}
+
+footer {
+    padding: 2rem 10%;
+    background-color: var(--footer-bg);
+    
+    .navbar-wrapper {
+
+        div {
+            width: 300px;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                
+                li {
+                    list-style-type: none;
+                    
+                    a {
+                        text-decoration: none;
+                        color: black;                
+                    }
+                    
+                    a:hover {
+                        color: black;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    
+    .subscribe-section {
+        margin-top: 20px;
+        color: black;
+
+        .icons-wrapper {
+
+            .icon {
+                margin: 5px;
+                a {
+
+                    img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+
+                a:hover {
+                    img {
+                        scale: 1.1;
+                    }
+                }
+            }
+
+            .instagram-link {
+                a {
+                    img {
+                        height: 32px;
+                        width: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

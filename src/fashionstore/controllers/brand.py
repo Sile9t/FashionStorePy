@@ -3,8 +3,8 @@ import jsonpickle
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for, make_response
 )
-from ..models import Brand
-from ..services import brandService
+from ..dao.models import Brand
+from ..service import brandService
 
 bp = Blueprint('brands', __name__, url_prefix='/brands')
 

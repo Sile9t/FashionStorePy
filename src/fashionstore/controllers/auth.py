@@ -7,8 +7,8 @@ from flask import (
 from werkzeug.security import check_password_hash, generate_password_hash
 
 # from flaskr.db import get_db
-from ..database.db import db_session
-from ..models import User
+# from ..dao.database import db_session
+from ..dao.models import User
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 

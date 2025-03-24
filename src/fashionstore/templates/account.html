@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/_utilities.css">
+    <link rel="stylesheet" href="./css/account.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src="./js/preload.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <input type="hidden" id="user-name" value="Maria">
+        <div class="header">
+            <h3>Личный кабинет, <span itemid="user-name">Maria</span></h3>
+        </div>
+        <div class="question-topics-wrapper d-flex flex-wrap flex-row justify-content-around">
+            <a href="">
+                <div class="access-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Access <span itemid="access-status">Bronze</span></p>
+                        <p class="topic-description">Прогресс в программе лояльности и инфорамция о привилегиях статуса</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="order-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Заказы и возвраты</p>
+                        <p class="topic-description">Отслеживание заказов и оформление возвратов</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="credit-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Кредит</p>
+                        <p class="topic-description">Баланс вашего счета и история транзакций</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="personal-data-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Личные данные и безопасность</p>
+                        <p class="topic-description">Имя, дата рождения, контактная информация и пароль</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="adresses-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Адресная книга</p>
+                        <p class="topic-description">Сохраненные адреса доставки и оплаты</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="settings-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Настройки</p>
+                        <p class="topic-description">Выбор страны доставки и валюты</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="subscribe-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Рассылка и оповещения</p>
+                        <p class="topic-description">Выбор языка и настройка оповещений</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="referal-program-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Реферальная программа</p>
+                        <p class="topic-description">Скидка для вас и ваших друзей</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="other-services-topic topic d-flex flex-column">
+                    <div class="text">
+                        <p class="topic-header">Другие сервисы</p>
+                        <p class="topic-description">Сайты и приложения, которые привязаны к вашему аккаунту</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <div class="d-flex flex-row justify-content-between">
+            <div class="not-my-account-wrapper">
+                <span itemid="user-name">Maria</span> - это не вы?
+                <a href="sign-out">Выйти</a>
+            </div>
+            <div class="need-help-wrapper">
+                <a href="help">Нужна помощь?</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

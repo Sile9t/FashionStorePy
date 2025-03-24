@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+:root {
+    --footer-bg: #E6E6E6;
+}
+
+#main {
+    h3 {
+        margin-bottom: 2rem;
+    }
+}
+
+footer {
+    height: 10vw;
+    padding: 2rem 10%;
+    background-color: var(--footer-bg);
+
+    a {
+        color: black;
+        margin: 1rem;                
+    }
+    
+    a:hover {
+        color: black;
+        font-weight: 500;
+    }
+}
