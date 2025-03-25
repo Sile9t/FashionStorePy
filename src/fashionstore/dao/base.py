@@ -50,7 +50,7 @@ class BaseDAO(Generic[T]):
             raise
 
     @classmethod
-    async def find_all(cls, session: AsyncSession, filters: BaseModel | None = None):
+    async def find_all(cls, session: AsyncSession, filters: BaseModel = None):
         # Найти все записи по фильтрам
         filter_dict = filters.model_dump(exclude_unset=True) if filters else {}
         logger.info(f"Поиск всех записей {cls.model.__name__} по фильтрам: {filter_dict}")
@@ -101,7 +101,7 @@ class BaseDAO(Generic[T]):
             raise e
 
     @classmethod
-    async def count(cls, session: AsyncSession, filters: BaseModel | None = None):
+    async def count(cls, session: AsyncSession, filters: BaseModel = None):
         # Подсчитать количество записей
         filter_dict = filters.model_dump(exclude_unset=True) if filters else {}
         logger.info(f"Подсчет количества записей {cls.model.__name__} по фильтру: {filter_dict}")
