@@ -61,7 +61,7 @@ class ClothingType(Base):
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[uniq_index_str_an] = mapped_column(String(100))
 
-    clothings: Mapped[List["Clothing"] | None] = relationship(
+    clothings: Mapped[List["Clothing"]] = relationship(
         "Clothing",
         back_populates="type",
         cascade="all, delete-orphan")
@@ -77,8 +77,12 @@ class Clothing(Base):
     type_id: Mapped[int] = mapped_column( ForeignKey("clothingtypes.id"), index=True)
     price: Mapped[float] = mapped_column(Float, CheckConstraint("price >= 0"), nullable=False)
     
-    brand: Mapped["Brand"] = relationship("Brand", back_populates="clothings")
-    type: Mapped["ClothingType"] = relationship("ClothingType", back_populates="clothings")
+    brand: Mapped["Brand"] = relationship(
+        "Brand",
+        back_populates="clothings")
+    type: Mapped["ClothingType"] = relationship(
+        "ClothingType",
+        back_populates="clothings")
     # materials = relationship("Material", secondary=clothing_materials, back_populates="clothing")
     # colors = relationship("Color", secondary=clothing_colors, back_populates="clothing")
     # sizes = relationship("Size", secondary=clothing_sizes, back_populates="clothing")
