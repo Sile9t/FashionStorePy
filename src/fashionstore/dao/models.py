@@ -44,7 +44,7 @@ class Brand(Base):
     country: Mapped[str] = mapped_column(String(50))
     website: Mapped[Optional[str]] = mapped_column(String(255))
 
-    clothings: Mapped[List["Clothing"] | None] = relationship(
+    clothings: Mapped[List["Clothing"]] = relationship(
         "Clothing",
         back_populates=("clothing.brand"),
         cascade="all, delete-orphan")
