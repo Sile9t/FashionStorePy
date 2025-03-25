@@ -1,4 +1,4 @@
-from typing import Annotated, List
+from typing import Annotated, List, Optional
 from sqlalchemy import TIMESTAMP, Table, Integer, Float, String, Text, DateTime, ForeignKey, CheckConstraint, func
 from sqlalchemy.orm import declared_attr, Mapped, relationship, DeclarativeBase, mapped_column
 # from sqlalchemy.ext.asyncio import AsyncAttrs
@@ -14,8 +14,8 @@ class User(Base):
     username: Mapped[uniq_index_str_an]
     email: Mapped[uniq_index_str_an]
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
-    first_name: Mapped[str | None] = mapped_column(String(50))
-    last_name: Mapped[str | None] = mapped_column(String(50))
+    first_name: Mapped[Optional[str]] = mapped_column(String(50))
+    last_name: Mapped[Optional[str]] = mapped_column(String(50))
     phone: Mapped[str] = mapped_column(String(20), CheckConstraint("LENGTH(phone) >= 10"))
     address: Mapped[str]
     
@@ -42,7 +42,7 @@ class Brand(Base):
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[uniq_index_str_an]
     country: Mapped[str] = mapped_column(String(50))
-    website: Mapped[str | None] = mapped_column(String(255))
+    website: Mapped[Optional[str]] = mapped_column(String(255))
 
     clothings: Mapped[List["Clothing"] | None] = relationship(
         "Clothing",
@@ -72,7 +72,7 @@ class ClothingType(Base):
 class Clothing(Base):
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
-    description: Mapped[str | None]
+    description: Mapped[Optional[str]]
     brand_id: Mapped[int] = mapped_column( ForeignKey("brands.id"), index=True)
     type_id: Mapped[int] = mapped_column( ForeignKey("clothingtypes.id"), index=True)
     price: Mapped[float] = mapped_column(Float, CheckConstraint("price >= 0"), nullable=False)
